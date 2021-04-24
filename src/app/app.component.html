@@ -1,8 +1,22 @@
+
 <div class="ce-root">
-<h1>{{ title }}</h1>
-
-
-{{  taste  ? "1":"2"}}
-
+<!-- <div *ngIf="taste" class="ce-root"> -->
+  <h1 (click)="changeTest()">{{ title }}</h1>
+<!-- <h2>{{ dish }}</h2> -->
+  <div *ngIf="taste">
+    <h2 [innerHTML]="link"></h2>
+    <span class="taste">
+      {{  taste  ? "😊":"😢"}}
+    </span>
+    <span>
+      {{"el "+title+" sirve una rica "
+      + dish}}
+    </span>
+  </div>
 
 </div>
+<ce-dish></ce-dish>
+<br/>
+<br/>
+<br/>
+<ce-examen></ce-examen>
